@@ -24,3 +24,10 @@ Cố gắng không gọi hàm trong tham số
 ```javascript
 hello(sum(1,2).ToString())
 ```
+
+->
+
+```javascript
+int sum = sum(1,2);
+hello(sum.ToString());
+```
