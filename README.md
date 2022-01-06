@@ -9,16 +9,16 @@ Tất cả các thuộc tính là cột của Database cần khai báo tên Colu
 public int Id {get;set;}
 ```
 
-2. Tất cả các thuộc tính là Property để parse json cần khai báo JsonProperty
-3. 
+Tất cả các thuộc tính là Property để parse json cần khai báo JsonProperty
+
 ```javascript
 [JsonProperty("Id")]
 public int Id {get;set;}
 ```
 
-3. Nếu sử dụng EntityFramework, rename sẽ không hoạt động, cần code sang project riêng và không protect phần này
+Nếu sử dụng EntityFramework, rename sẽ không hoạt động, cần code sang project riêng và không protect phần này
 
-4. Cố gắng không gọi hàm trong tham số
+Cố gắng không gọi hàm trong tham số
 
 ```javascript
 hello(sum(1,2).ToString())
