@@ -31,3 +31,17 @@ hello(sum(1,2).ToString())
 int sum = sum(1,2);
 hello(sum.ToString());
 ```
+
+Khai báo dynamic
+
+```javascript
+// Lỗi
+var obj = new
+{
+    id = "123"
+}
+
+// OK
+dynamic obj = new ExpandoObject();
+obj.id = "123";
+```
