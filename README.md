@@ -45,3 +45,24 @@ var obj = new
 dynamic obj = new ExpandoObject();
 obj.id = "123";
 ```
+
+Một số thuộc tính ngoại lệ, sẽ không bị rename
+
+```javascript
+class Profile 
+{
+     public string Selected {get;set;}
+     public string Name {get;set;}
+}
+```
+
+Nếu sử dụng WPF, có binding XAML, sẽ cần binding qua code thủ công theo các cột
+```javascript
+
+// Lấy ra các thuộc tính của Profile (đã được rename), sau đó truy xuất theo thứ tự đã khai báo của property
+List<string> propertiesName = typeof(Profile).GetProperties().Select(p => p.Name).ToList();
+
+colName.Binding = new Binding(propertiesName[2]);
+colProfilePath.Binding = new Binding(propertiesName[3]);
+colBrowserType.Binding = new Binding(propertiesName[4]);
+```
