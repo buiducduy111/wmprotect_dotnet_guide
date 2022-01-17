@@ -46,17 +46,7 @@ dynamic obj = new ExpandoObject();
 obj.id = "123";
 ```
 
-Một số thuộc tính ngoại lệ, sẽ không bị rename
-
-```javascript
-class Profile 
-{
-     public string Selected {get;set;}
-     public string Name {get;set;}
-}
-```
-
-Nếu sử dụng WPF, có binding XAML, sẽ cần binding qua code thủ công theo các cột
+Nếu sử dụng WPF, có binding XAML, sẽ cần binding qua code thủ công theo các cột, tốt nhất tách ra project Models, không mã hóa Models
 ```javascript
 
 // Lấy ra các thuộc tính của Profile (đã được rename), sau đó truy xuất theo thứ tự đã khai báo của property
