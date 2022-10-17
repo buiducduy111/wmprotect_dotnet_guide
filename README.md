@@ -46,13 +46,7 @@ dynamic obj = new ExpandoObject();
 obj.id = "123";
 ```
 
-Nếu sử dụng WPF, có binding XAML, sẽ cần binding qua code thủ công theo các cột, tốt nhất tách ra project Models, không mã hóa Models
-```javascript
-
-// Lấy ra các thuộc tính của Profile (đã được rename), sau đó truy xuất theo thứ tự đã khai báo của property
-List<string> propertiesName = typeof(Profile).GetProperties().Select(p => p.Name).ToList();
-
-colName.Binding = new Binding(propertiesName[2]);
-colProfilePath.Binding = new Binding(propertiesName[3]);
-colBrowserType.Binding = new Binding(propertiesName[4]);
+Nếu sử dụng WPF, có binding XAML, khi property bị change name sẽ gây lỗi, cần tạo project dll mới copy các UserControl có Property ra. Khi gọi namespace, thêm assmbly là tên thư viện
+```
+xmlns:Inputs="clr-namespace:GPMLogin.Views.Components.Inputs;assembly=GPMLogin.UI"
 ```
