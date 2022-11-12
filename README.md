@@ -50,3 +50,5 @@ Nếu sử dụng WPF, có binding XAML, khi property bị change name sẽ gây
 ```
 xmlns:Inputs="clr-namespace:GPMLogin.Views.Components.Inputs;assembly=GPMLogin.UI"
 ```
+
+VMProtect sẽ lỗi "at <Module>..cctor()" (xem tại Event viewer) nếu cài Selenium 4.6.x (bản sử dụng selenium-manager) --> cài xuống 4.5.1
